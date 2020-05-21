@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    background-size: cover;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    align-self: flex-end;
+    height: 105px;
+}
+
+#image_portafolio{
+    padding:  10px 10px 10px 10px;
+    border-radius: 5%;
+    
+}
+
+

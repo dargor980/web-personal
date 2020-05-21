@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     
     <!--css-->
-    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/portafolio.css">
 
     <script src="static/popper/popper.min.js"></script>
 </head>
@@ -49,7 +49,40 @@
         </nav>
     </header>
    
-      
+    <div class="container-fluid">
+      <br>
+      <h1 class="text-light">Portafolio de proyectos</h1>
+      <br><br>
+      <div class="container bg-secondary rounded" id="lista">
+      <div class="lista_proyectos">
+        <ul class="list-unstyled">
+          <li class="media border-top border-bottom border-dark">
+            <img class="mr-3"src="static/img/tecnidata.png" alt="imagen proyecto" style="width: 40%;" id="image_portafolio">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">SIA TecniData</h5>
+              Sistema de información administrativo para la empresa TecniData 
+            </div>
+          </li>
+
+          <li class="media my-4 border-top border-bottom border-dark">
+            <img class="mr-3" src="..." alt="imagen proyecto">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">List-based media object</h5>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </li>
+          <li class="media border-top border-bottom border-dark">
+            <img class="mr-3" src="..." alt="imagen proyecto">
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">List-based media object</h5>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            </div>
+          </li>
+        </ul>
+          
+      </div>
+      </div>
+    </div>
    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
