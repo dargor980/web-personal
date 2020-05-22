@@ -48,39 +48,30 @@
                 </div>
         </nav>
     </header>
-   
+    
     <div class="container-fluid">
       <br>
       <h1 class="text-light">Portafolio de proyectos</h1>
       <br><br>
       <div class="container bg-secondary rounded" id="lista">
-      <div class="lista_proyectos">
+        <!--Lista de proyectos-->
         <ul class="list-unstyled">
-          <li class="media border-top border-bottom border-dark">
-            <img class="mr-3"src="static/img/tecnidata.png" alt="imagen proyecto" style="width: 40%;" id="image_portafolio">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1">SIA TecniData</h5>
-              Sistema de información administrativo para la empresa TecniData 
-            </div>
-          </li>
-
-          <li class="media my-4 border-top border-bottom border-dark">
-            <img class="mr-3" src="..." alt="imagen proyecto">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1">List-based media object</h5>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            </div>
-          </li>
-          <li class="media border-top border-bottom border-dark">
-            <img class="mr-3" src="..." alt="imagen proyecto">
-            <div class="media-body">
-              <h5 class="mt-0 mb-1">List-based media object</h5>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            </div>
-          </li>
+        <?php
+          $conexion = mysqli_connect("localhost","root","","web_personal") or
+            die("Problemas con la conexión");
+            $registros = mysqli_query($conexion, "SELECT *FROM proyecto") or
+              die("Error: " . mysqli_error($conexion));
+            while($reg = mysqli_fetch_array($registros)): ?>
+                
+              <li class="media border-top border-bottom border-dark">
+                <img class="mr-3"src="static/img/tecnidata.png" alt="imagen proyecto" style="width: 40%;" id="image_portafolio">
+                  <div class="media-body">
+                    <h5 class="mt-0 mb-1"><?php echo $reg['nombre']?></h5>
+                      <?php echo $reg['descripcion'] ?>
+                  </div>
+              </li>
+            <?php endwhile; ?>
         </ul>
-          
-      </div>
       </div>
     </div>
    
